@@ -1,14 +1,9 @@
 # Unsupervised-Machine-Learning-Challenge
 
-# Myopia Clusters
+# Myopia Clusters : Story
 
-In this assignment, you’ll apply what you learned about unsupervised learning by fitting data to a model and using clustering algorithms to place data into groups. Then, you’ll create a visualization that shares your findings. 
+We as a data science team of a medical research company have been assigned to find better ways to predict myopia, or nearsightedness. By using unsupervised learning, we would need to separate group of distinct patients that would be better to analyze. We've been provided with raw Data that would need to be processed to fit the machine learning models. We would use clustering models to explore whether the patients can be placed into distinct groups. The visualizations created would be shared with the team and other officials.
 
-## Background
-
-You are on the data science team of a medical research company that’s interested in finding better ways to predict myopia, or nearsightedness. Your team has tried—and failed—to improve their classification model when training on the whole dataset. However, they believe that there might be distinct groups of patients that would be better to analyze separately. So, your supervisor has asked you to explore this possibility by using unsupervised learning.
-
-You have been provided with raw data, so you’ll first need to process it to fit the machine learning models. You will use several clustering algorithms to explore whether the patients can be placed into distinct groups. Then, you’ll create a visualization to share your findings with your team and other key stakeholders.
 
 ## Instructions
 
@@ -30,7 +25,7 @@ This activity is broken down into four parts:
 
     * **Note:** The target column is needed for supervised machine learning, but it will make an unsupervised model biased. After all, the target column is effectively providing clusters already! 
 
-3. Standardize your dataset so that columns that contain larger values do not influence the outcome more than columns with smaller values.
+3. Standardize the dataset so that columns that contain larger values do not influence the outcome more than columns with smaller values.
 
 ### Part 2: Apply Dimensionality Reduction
 
@@ -51,11 +46,13 @@ Create an elbow plot to identify the best number of clusters. Make sure to do th
 
 * If possible, determine where the elbow of the plot is, and at which value of `k` it appears.
 
-### Part 4: Make a Recommendation
-
-Based on your findings, write up a brief (one or two sentences) recommendation for your supervisor in your Jupyter Notebook. Can the patients be clustered? If so, into how many clusters? 
-
 
 ## References
 
 Reduced dataset from [Orinda Longitudinal Study of Myopia conducted by the US National Eye Institute](https://clinicaltrials.gov/ct2/show/NCT00000169)
+
+## Analysis and Recommendation:
+
+After taking all the steps as stated in the instructions, we yielded 10 principal components while preserving 90% of the explained variance. We also, plotted a scatter plot with the t-SNE model using the PCA data.  We were not able to distinguish the clusters fairly using this model.Further more, we created a line plot performing a cluster analysis with K-Means. Observing the plot, the elbow of the curve seems to start at 3. Hence we did our predictions with k=3 and conclude that the patients can be clustered into 3 groups.    
+
+
